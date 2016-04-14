@@ -31,6 +31,7 @@
 namespace Ovh\Sms;
 
 use Ovh\Api;
+use GuzzleHttp\Client;
 
 /**
  * Wrapper to manage login and exchanges with Ovh API
