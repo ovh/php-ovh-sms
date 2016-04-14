@@ -206,7 +206,7 @@ class Message
      */
     public function setIsMarketing($isMarketing)
     {
-        $this->marketing = $isMarketing;
+        $this->isMarketing = $isMarketing;
     }
 
     /**
