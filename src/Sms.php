@@ -168,12 +168,12 @@ class Sms
     /**
      * Delete the SMS
      *
-     * @return void
+     * @return array
      * @throws \GuzzleHttp\Exception\ClientException if http request returns an error
      */
     public function delete()
     {
-        return $this->Sms->getConnection()->delete('/sms/'.$this->Sms->getAccount().'/'.$this->type.'/'.$this->id);
+        return $this->Sms->getConnection()->delete($this->Sms->getUri().$this->type.'/'.$this->id);
     }
 
 
