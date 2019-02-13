@@ -388,7 +388,7 @@ class SmsApi
      * @throws \GuzzleHttp\Exception\ClientException     if http request returns an error
      * @throws \Ovh\Exceptions\InvalidParameterException if account is not set or parameters are invalid
      */
-    public function getOutgoingMessages($dateStart = null, $dateEnd = null, $sender = null, $receiver = null, $tag = null)
+    public function getOutgoingMessages($startDateTime = null, $endDateTime = null, $sender = null, $receiver = null, $tag = null)
     {
         if (is_null($this->account)) {
             throw new \Ovh\Exceptions\InvalidParameterException("Please set account before using this function");
