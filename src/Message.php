@@ -225,6 +225,23 @@ class Message
 
         $this->sender = $sender;
     }
+    
+    /**
+     * Set the sender of the message after checking it is a valid sender
+     *
+     * @param string $sender sender of the message
+     *
+     * @return void
+     * @throws \Ovh\Exceptions\InvalidParameterException if sender is invalid
+     */
+    public function setSender($sender)
+    {
+        if (!$this->Sms->checkSender($sender)) {
+            throw new \Ovh\Exceptions\InvalidParameterException("Sender parameter is invalid");
+        }
+
+        $this->sender = $sender;
+    }
 
     private function is_gsm0338($utf8_string) {
 
