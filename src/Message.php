@@ -74,7 +74,7 @@ class Message
     /**
      * Delivery datetime
      *
-     * @var DateTime
+     * @var \DateTimeInterface
      */
     private $deliveryDate = null;
 
@@ -171,7 +171,7 @@ class Message
     /**
      * Set the delivery date of the message
      *
-     * @param dateTime $dateTime date when the message should be sent
+     * @param \DateTimeInterface $dateTime date when the message should be sent
      *
      * @return void
      */
@@ -180,7 +180,7 @@ class Message
         if (!isset($dateTime)) {
             throw new \Ovh\Exceptions\InvalidParameterException("Date parameter is empty");
         }
-        if (!is_a($dateTime, "DateTime")) {
+        if (!$dateTime instanceof \DateTimeInterface) {
             throw new \Ovh\Exceptions\InvalidParameterException("Date parameter must be a DateTime object");
         }
 
