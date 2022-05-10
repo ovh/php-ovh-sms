@@ -55,7 +55,7 @@ Even better, the credentials can be configured to only allow access on some spec
 features. In this case, we only want the script to access the SMS features.
 
 To generate credentials to access all the SMS features, you can simply visit
-https://api.ovh.com/createToken/index.cgi?GET=/sms&GET=/sms/*&PUT=/sms/*&DELETE=/sms/*&POST=/sms/*
+[https://api.ovh.com/createToken/index.cgi?GET=/sms&GET=/sms/\*&PUT=/sms/\*&DELETE=/sms/\*&POST=/sms/\*](https://api.ovh.com/createToken/index.cgi?GET=/sms&GET=/sms/*&PUT=/sms/*&DELETE=/sms/*&POST=/sms/*)
 
 And then use the generated credentials in you application.
 
